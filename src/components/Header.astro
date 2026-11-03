@@ -1,0 +1,17 @@
+---
+interface Props { home?: boolean }
+const { home = false } = Astro.props;
+const base = home ? '' : '/';
+---
+<header class="site-header wrap">
+  <a class="wordmark" href="/" aria-label="Pixelsmith, home">
+    <svg class="brand-mark" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M12 0h8v8h4v4h8v8h-8v4h-4v8h-8v-8H8v-4H0v-8h8V8h4z" /></svg>
+    pixelsmith<span class="wordmark-period">.</span>
+  </a>
+  <nav aria-label="Main navigation">
+    <a href={`${base}#work`}>Work<span class="nav-dot"></span></a>
+    <a href={`${base}#about`}>About</a>
+    <a class="resume-link" href="/resume">Résumé <span aria-hidden="true">↗</span></a>
+  </nav>
+  <a class="header-contact" href={`${base}#contact`}>Let’s talk <span aria-hidden="true">↗</span></a>
+</header>

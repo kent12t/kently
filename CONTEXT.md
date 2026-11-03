@@ -17,6 +17,8 @@ Last updated: 2026-11-03
 ### Portfolio goals and platform preferences
 
 - Build a cool, interactive personal portfolio replacing a defunct WordPress site. This repo also supports career exploration.
+- Current brand is Pixelsmith, with a domain already owned. Kent is open to renaming; the studio-versus-personal-practice framing is unresolved.
+- Wants a playful landing page with creative interaction, while making hiring fit and portfolio clarity the priority.
 - Kent is open to Astro if it is straightforward to use, but has little practical experience with it. Cloudflare Pages is the anticipated host; actual deployment setup is unconfirmed.
 
 ### Career goals and work preferences
@@ -75,7 +77,7 @@ Source: `feedback.txt`; frontend engineer interview reached round 3 in July 2026
 
 ### User position
 
-Open to Astro, provided it is approachable. No detailed architecture or visual direction has been approved.
+Open to Astro, provided it is approachable. Kent requested implementation of a playful, hiring-focused landing page. The implemented Pixelsmith personal-practice direction and homepage project examples remain proposals, not approved branding, positioning, or a final shortlist.
 
 Kent requested Markdown About and résumé drafts, visual-evidence preparation, and a first case-study draft. Working copy is in [content/about.md](content/about.md), [content/resume.md](content/resume.md), [content/evidence-plan.md](content/evidence-plan.md), and [content/case-studies/galilean-mission.md](content/case-studies/galilean-mission.md). These are editorial proposals, not approved public claims or a final shortlist. Actual visual review awaits media; no project media was present in the repository at preparation time.
 
@@ -96,7 +98,7 @@ Kent requested Markdown About and résumé drafts, visual-evidence preparation, 
 
 ### Reviewed repository baseline
 
-Astro 5/Tailwind 4 starter, no React integration or CMS, default static output. See `package.json` and `astro.config.mjs` for current details.
+Astro/Tailwind static portfolio implementation, without React integration or a CMS. See [README.md](README.md), `package.json`, and `astro.config.mjs` for current implementation details and publication checks.
 
 ## Career working hypotheses — not decisions
 
@@ -141,4 +143,4 @@ Singapore is a provisional focus, not a confirmed geographic constraint. Leads a
 - Review the requested Galilean Mission media and 3D/motion samples using the evidence plan; revise the narrative after assessing finished work. Clarify desired balance between the activities Kent enjoys and tolerance for research, implementation, and event-hours demands rather than reopening already stated interests.
 - Clarify salary floor, location/work authorization, relocation/remote preferences, travel/hours, and desired mentorship.
 - Confirm public-use permissions for client assets and whether campaign submissions/camera data require special care in demos.
-- Complete the first case-study draft with reviewed evidence before investing in an elaborate homepage. Employer/vacancy research and role shortlisting are deferred at Kent's request.
+- Review the implemented landing-page direction and complete case studies with approved visual evidence, claims, credits, and public contact details before launch. Employer/vacancy research and role shortlisting are deferred at Kent's request.

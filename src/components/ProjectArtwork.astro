@@ -1,0 +1,59 @@
+---
+interface Props { kind: 'galilean' | 'hawker' | 'cards' | 'bloom'; large?: boolean }
+const { kind, large = false } = Astro.props;
+---
+<div class:list={['project-art', `art-${kind}`, { 'art-large': large }]} aria-hidden="true">
+  {kind === 'galilean' && <svg viewBox="0 0 720 470" fill="none">
+    <defs>
+      <radialGradient id="jupiter"><stop stop-color="#f4b9a0" /><stop offset=".6" stop-color="#c58073" /><stop offset="1" stop-color="#704760" /></radialGradient>
+      <linearGradient id="portal" x2="1" y2="1"><stop stop-color="#c8baff" /><stop offset=".5" stop-color="#8580df" /><stop offset="1" stop-color="#454a9f" /></linearGradient>
+      <linearGradient id="portal-wall"><stop stop-color="#232754" /><stop offset="1" stop-color="#454779" /></linearGradient>
+      <pattern id="stars" width="119" height="93" patternUnits="userSpaceOnUse"><circle cx="14" cy="22" r="1.2" fill="#c4c0e9" /><circle cx="84" cy="67" r=".7" fill="#9b9ac6" /></pattern>
+    </defs>
+    <rect width="720" height="470" fill="url(#stars)" />
+    <circle cx="565" cy="105" r="68" fill="url(#jupiter)" /><path d="M501 88q60 25 128 3m-130 11q60 28 132 5m-120 28q57 19 112 1" stroke="#e4a297" stroke-width="7" opacity=".4" />
+    <ellipse cx="557" cy="110" rx="108" ry="22" stroke="#d7b1b1" stroke-width="1" transform="rotate(-27 557 110)" />
+    <path d="m91 322 286-151 257 143-286 149z" fill="#202446" stroke="#454a7b" /><path d="m152 321 225-119 197 110-225 119z" fill="#2a2e57" stroke="#454a7b" /><path d="m236 316 141-75 111 62-141 75z" fill="#46477e" opacity=".5" />
+    <path d="M200 309V154q0-54 48-75l80-36q59-28 59 35v130l-27 15V93q0-31-28-18l-80 36q-25 12-25 42v142z" fill="url(#portal)" />
+    <path d="m200 309-22-13V143q0-54 48-75l80-36q28-13 44-5l22 13q-16-9-44 3l-80 36q-48 21-48 75z" fill="#a8a2ed" />
+    <path d="M227 295V153q0-30 25-42l80-36q28-13 28 18v130z" fill="url(#portal-wall)" /><path d="m240 278 107-57V105q0-20-18-11l-65 30q-24 11-24 34z" fill="#191e46" stroke="#8584cf" />
+    <circle cx="294" cy="172" r="25" fill="#c3f378" /><path d="m277 173 10 7 21-23" stroke="#394d36" stroke-width="3" /><path d="m245 253 99-53" stroke="#bab0ff" stroke-width="2" stroke-dasharray="3 4" />
+    <g fill="#edebef"><circle cx="415" cy="258" r="10" /><path d="M404 274q12-10 22 0l5 41-13 7-17-9z" /><path d="m404 283-20-6m40 4 21-22m-37 53-3 28m17-23 10 17" stroke="#edebef" stroke-width="6" stroke-linecap="round" /></g>
+    <g fill="#a6b8f8"><circle cx="483" cy="303" r="8" /><path d="M474 317q9-9 18 0l3 30-9 6-13-6z" /><path d="m475 326-15-12m32 13 16-6m-30 24-3 22m15-18 7 16" stroke="#a6b8f8" stroke-width="5" stroke-linecap="round" /></g>
+    <ellipse class="signal-ring ring-one" cx="424" cy="327" rx="65" ry="31" stroke="#c3f378" opacity=".5" /><ellipse class="signal-ring ring-two" cx="424" cy="327" rx="89" ry="44" stroke="#c3f378" opacity=".25" />
+    <path d="m552 352 31 18m-15-25 31 18" stroke="#a5a1d2" stroke-width="1" />
+    <text x="44" y="47" fill="#c1bee2" font-family="monospace" font-size="10" letter-spacing="2">BEYOND THE SCREEN</text><text x="44" y="430" fill="#c1bee2" font-family="monospace" font-size="10" letter-spacing="1">SPACE × INTERACTION × IMAGINATION</text>
+  </svg>}
+  {kind === 'hawker' && <svg viewBox="0 0 720 470" fill="none">
+    <defs><radialGradient id="plate-orange"><stop offset=".64" stop-color="#ec7245" /><stop offset=".69" stop-color="#d05b34" /><stop offset=".75" stop-color="#f69d70" /><stop offset="1" stop-color="#e8794b" /></radialGradient><radialGradient id="plate-green"><stop offset=".62" stop-color="#93a38b" /><stop offset=".68" stop-color="#6d8168" /><stop offset=".74" stop-color="#b4c1a7" /><stop offset="1" stop-color="#84957d" /></radialGradient><radialGradient id="plate-blue"><stop offset=".62" stop-color="#8fb5be" /><stop offset=".68" stop-color="#69939f" /><stop offset=".75" stop-color="#bfdae1" /><stop offset="1" stop-color="#91b7c1" /></radialGradient></defs>
+    <path d="M0 370 720 145v325H0z" fill="#e9d6b7" />
+    <g transform="rotate(-23 360 235)"><ellipse cx="240" cy="280" rx="137" ry="105" fill="#a95932" opacity=".13" /><ellipse cx="240" cy="268" rx="137" ry="105" fill="#c65f39" /><ellipse cx="240" cy="261" rx="137" ry="105" fill="url(#plate-orange)" /><ellipse cx="390" cy="190" rx="126" ry="96" fill="#718066" /><ellipse cx="390" cy="183" rx="126" ry="96" fill="url(#plate-green)" /><ellipse cx="490" cy="307" rx="112" ry="85" fill="#638b95" /><ellipse cx="490" cy="300" rx="112" ry="85" fill="url(#plate-blue)" /><ellipse cx="267" cy="101" rx="75" ry="57" fill="#e8d5a7" /><ellipse cx="267" cy="96" rx="75" ry="57" fill="#fff2ce" /><ellipse cx="267" cy="95" rx="49" ry="35" fill="#efdfb8" /><ellipse cx="267" cy="94" rx="43" ry="30" fill="#f8ebc9" /></g>
+    <g transform="translate(70 356) rotate(-7)"><rect width="185" height="57" fill="#f8f4e6" /><circle cx="25" cy="29" r="8" fill="#e8794b" /><circle cx="48" cy="29" r="8" fill="#84957d" /><circle cx="71" cy="29" r="8" fill="#91b7c1" /><text x="96" y="33" font-size="10" fill="#584d37" font-family="monospace">a local palette.</text></g>
+    <text x="44" y="47" fill="#6f5d41" font-family="monospace" font-size="10" letter-spacing="2">EVERYDAY OBJECTS. UNTOLD STORIES.</text>
+  </svg>}
+  {kind === 'cards' && <svg viewBox="0 0 720 470" fill="none">
+    <defs><pattern id="card-grid" width="35" height="35" patternUnits="userSpaceOnUse"><path d="M35 0H0v35" stroke="#becbe2" stroke-width=".7" /></pattern></defs><rect width="720" height="470" fill="url(#card-grid)" />
+    <g transform="translate(140 94) rotate(-10 150 140)"><rect x="0" y="10" width="286" height="283" rx="5" fill="#8e9dc6" opacity=".22" /><rect width="286" height="283" rx="5" fill="#f7abc5" /><rect x="17" y="17" width="252" height="249" rx="2" stroke="#d17e9a" stroke-dasharray="5 4" /><path d="M64 148C12 109 66 68 95 106c29-38 82 3 30 42l-30 23z" fill="#c34d72" /><text x="43" y="213" font-size="32" font-family="sans-serif" font-weight="700" fill="#7f2747">a little thanks.</text></g>
+    <g transform="translate(343 105) rotate(10 130 140)">
+      <rect x="0" y="10" width="251" height="285" rx="5" fill="#8e9dc6" opacity=".25" />
+      <rect width="251" height="285" rx="5" fill="#fffcef" />
+      <path d="m0 0h251v285H0z" stroke="#d4e994" stroke-width="15" stroke-dasharray="14 9" />
+      <text x="29" y="80" font-size="29" font-weight="800" font-family="sans-serif" fill="#294fdf">YOU MAKE</text>
+      <text x="29" y="115" font-size="27" font-weight="800" font-family="sans-serif" fill="#294fdf">A DIFFERENCE.</text>
+      <path d="m128 141 12 27 29-8-11 28 25 18-29 5-2 30-23-19-24 19-2-30-29-6 25-18-11-27 29 8z" fill="#c9ed82" />
+      <circle cx="119" cy="191" r="3" fill="#324b26" /><circle cx="137" cy="191" r="3" fill="#324b26" />
+      <path d="M119 202q9 9 18 0" stroke="#324b26" stroke-width="2" />
+      <text x="62" y="262" font-size="10" letter-spacing="1" font-family="monospace" fill="#6f745c">MADE TO BE SHARED</text>
+    </g>
+    <g transform="translate(576 74)"><circle r="34" fill="#294fdf" /><path d="m-14 0 10 10 20-22" stroke="#f8f6eb" stroke-width="3" stroke-linecap="round" /></g><text x="44" y="435" fill="#4a6088" font-family="monospace" font-size="10" letter-spacing="2">SMALL GESTURES. SHARED APPRECIATION.</text>
+  </svg>}
+  {kind === 'bloom' && <svg viewBox="0 0 720 470" fill="none">
+    <path d="M0 375q140-90 323-10t397-10v115H0z" fill="#cbd7b0" /><path d="M0 414q150-78 345-13t375-3v72H0z" fill="#b3c59a" /><rect x="193" y="46" width="334" height="352" rx="22" stroke="#789572" stroke-width="1.5" stroke-dasharray="7 6" /><path d="M213 89V66h24m266 0h-24m24 0v23M213 355v23h24m266-23v23h-24" stroke="#66835c" stroke-width="3" />
+    <circle cx="356" cy="119" r="23" fill="#5f7c5c" /><path d="m353 156-17 82 58 9-6-81z" fill="#809775" /><path d="m341 173-46 40-25-38m110-4 45 35 27-40m-105 71-23 52-14 49m76-95 22 44 21 49" stroke="#5f7c5c" stroke-width="13" stroke-linecap="round" />
+    <g stroke="#e0efbd" stroke-width="2"><path d="m356 119-16 57-45 37-25-38m70 1 40-5 45 35 27-40m-112 10-4 62 50 5-6-72m-44 67-12 51-14 49m76-95 22 44 21 49" /><g fill="#e0efbd"><circle cx="356" cy="119" r="4" /><circle cx="340" cy="176" r="4" /><circle cx="380" cy="171" r="4" /><circle cx="336" cy="238" r="4" /><circle cx="386" cy="243" r="4" /><circle cx="295" cy="213" r="4" /><circle cx="425" cy="206" r="4" /></g></g>
+    <path d="M149 412V290m0 72q-43 0-43-31 34-2 43 31m0-17q42-8 38-33-32 3-38 33M565 416V319m0 53q36-4 36-27-30 0-36 27" stroke="#4f7753" stroke-width="4" fill="#769965" />
+    <g fill="#c093d0" transform="translate(149 274)"><ellipse cy="-20" rx="17" ry="29" /><ellipse cy="-20" rx="17" ry="29" transform="rotate(72)" /><ellipse cy="-20" rx="17" ry="29" transform="rotate(144)" /><ellipse cy="-20" rx="17" ry="29" transform="rotate(216)" /><ellipse cy="-20" rx="17" ry="29" transform="rotate(288)" /><circle r="15" fill="#efd58c" /></g>
+    <g fill="#e4ab73" transform="translate(565 307)"><ellipse cy="-15" rx="12" ry="23" /><ellipse cy="-15" rx="12" ry="23" transform="rotate(72)" /><ellipse cy="-15" rx="12" ry="23" transform="rotate(144)" /><ellipse cy="-15" rx="12" ry="23" transform="rotate(216)" /><ellipse cy="-15" rx="12" ry="23" transform="rotate(288)" /><circle r="11" fill="#f9e8af" /></g><text x="44" y="47" fill="#496647" font-family="monospace" font-size="10" letter-spacing="2">A LITTLE MOVEMENT. A LITTLE MAGIC.</text>
+  </svg>}
+  <span class="art-caption mono">INTERPRETIVE ILLUSTRATION</span><span class="project-open" aria-hidden="true">↗</span>
+</div>

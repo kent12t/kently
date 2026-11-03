@@ -4,6 +4,10 @@
 
 ## Short introduction
 
+### I design experiences for screens and spaces.
+
+Interactive prototypes, playful interfaces, and environments brought to life.
+
 I'm Kent, a designer and creative technologist working across interactive interfaces, 3D, and physical spaces. I turn ideas into experiences people can explore, play with, and take part in—with an eye for both how they look and how they work in practice.
 
 ## About me

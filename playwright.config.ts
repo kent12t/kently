@@ -12,7 +12,7 @@ export default defineConfig({
     { name: 'mobile', use: { ...devices['iPhone 13'], defaultBrowserType: 'chromium' } },
   ],
   webServer: {
-    command: 'node ./node_modules/astro/astro.js preview --host 127.0.0.1 --port 4322',
+    command: 'npm run preview -- --host 127.0.0.1 --port 4322',
     url: 'http://127.0.0.1:4322',
     reuseExistingServer: !process.env.CI,
   },

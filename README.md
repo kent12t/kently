@@ -27,6 +27,7 @@ Browser tests cover desktop and mobile layouts, keyboard/pointer interaction, Re
 - `src/data/projects.ts`: project summaries, roles, decisions, outcomes, and credits. Cross-check factual changes against `PROJECTS.md`.
 - `src/pages/work/[slug].astro`: statically generated project stories.
 - `src/pages/resume.astro`: printable résumé. The print button supports the browser’s Save as PDF.
+- `content/Kent_Timothy_Resume.html`: standalone, editable résumé with embedded fonts (not published by Astro). Open it in a browser, choose **Edit text**, then **Save HTML** to download a copy containing your edits. Replace the repo file with that download to update the source; browsers cannot silently overwrite the original file. Browser autosave is a convenience only and may be unavailable for local files or private browsing. Choose **Print / Save PDF**, select **Save as PDF**, use A4 at 100% scale, and disable browser headers/footers. The fit indicator warns when content exceeds one page. This preserves the supplied visual layout and wording; ATS compatibility has not been verified.
 - `src/components/Playground.astro`: draggable SVG playground. Arrow keys move focused objects; Enter/Space rotates them; Remix offers a touch/keyboard-friendly alternative.
 - `src/components/ProjectArtwork.astro`: original interpretive project illustrations.
 - `src/styles/global.css`: visual system, responsive layouts, reduced-motion rules, and print styles.

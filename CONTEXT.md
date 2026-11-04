@@ -1,6 +1,6 @@
 # Portfolio and career context
 
-Last updated: 2026-11-03
+Last updated: 2026-11-04
 
 ## Maintenance instructions
 
@@ -46,10 +46,11 @@ Source: `KentTimothy_Resume_Apr2026-1.pdf`, described by Kent as accurate as of 
 
 ### Reviewed project evidence
 
-The inventory records 3 November 2026 history/selected-code and documentation reviews across installation, roadshow, NCOS, editorial, hackathon, pitch, and independent quiz work. Its source statement defines review scope and attribution exceptions. Repository evidence does not independently verify reported usage, usability, or real-world reliability; finished experiences have not been visually assessed in this portfolio review.
+The inventory records 3–4 November 2026 history/selected-code and documentation reviews across installation, roadshow, NCOS, editorial, hackathon, pitch, independent quiz, and museum-app work. Its source statement defines review scope and attribution exceptions. Repository evidence does not independently verify reported usage, usability, or real-world reliability; finished experiences have not been visually assessed in this portfolio review.
 
 - The newer NCOS apps used largely AI-assisted implementation. Kent particularly highlights CCD Thank You's product-experience refinement; safeguard scope and validation gaps are documented in the inventory.
 - Do not equate AI assistance with absence of authorship or product judgement; equally, shipped output and configured checks do not by themselves establish independent code understanding or reliability.
+- Design Incubation Centre internship (January–June 2023, confirmed by Kent) establishes early work across p5.js interaction mechanics and collaborative Flutter UI/navigation, not sole ownership of the museum app, NFC, or backend. Museum coverage confirms *A Digital Naturalist* launched in April 2023; personal scope and unresolved design credits are in [museum app and games](PROJECTS.md#lee-kong-chian-natural-history-museum--app-and-games).
 
 ### Additional 3D and motion work
 

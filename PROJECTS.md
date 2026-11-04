@@ -10,6 +10,8 @@ Sources: Kent's project notes, `KentTimothy_Resume_Apr2026-1.pdf`, and review of
 
 Additional review on the same date covered histories and selected code/documentation in `hawker-colors-survey/hawker-colors`, `graysonjova/tdhr`, `graysonjova/TDHR-Server`, `kent12t/dbs-wordcloud-v2`, and `kent12t/forkcast`. Hawker Colours review included `develop` and Kent's `main` history plus constituent commits of selected PRs; unmerged branches were not exhaustively reviewed. TDHR is an explicit attribution exception: Kent reports implementing UX/frontend work under his friend's GitHub identity as well as his own, so account names do not reliably establish personal ownership there. These projects were not run or visually assessed in this review.
 
+Review on 4 November 2026 covered the default-branch histories and selected implementation changes in `kent12t/lkcnhm-games` and `didny/musee-lkcnhm`. The latter preserves the original collaborative development history; the former is a June 2024 standalone extraction. Neither app nor games were run or visually assessed.
+
 ## Editing guidelines
 
 - Retain these guidelines when updating or rewriting this document. This is a portfolio-preparation reference, not a conversation log or finished portfolio copy.
@@ -383,12 +385,34 @@ Pose inference runs in-browser with locally served model assets; no inference se
 
 ### Overview
 
-- **Context:** Design Incubation Centre internship, May–July 2023.
+- **Context:** Design Incubation Centre internship, January–June 2023, confirmed by Kent.
 - **Client / venue:** Lee Kong Chian Natural History Museum (LKCNHM).
-- **Format:** Cross-platform app and p5.js games.
-- **Tools:** Flutter, p5.js.
+- **Experience:** *A Digital Naturalist* (listed as LKCNHM* in app stores), powered by Musee and designed by DIC. NFC-enabled museum app for *In the footsteps of a naturalist*, with four Heritage Gallery checkpoints unlocking learning activities about naturalists and biodiversity.
+- **Repositories / demo:** [Original app and history](https://github.com/didny/musee-lkcnhm); [standalone games](https://github.com/kent12t/lkcnhm-games); [mobile-oriented game demo](https://kent12t.github.io/lkcnhm-games/).
+- **Recorded development / launch:** Kent's default-branch commits span 25 January–17 April 2023. Launched at the museum's eighth-anniversary event on 18 April 2023, confirmed by museum coverage and Kent; Yuta's 17 April commit is labelled “Release for Opening Event”. Standalone games published in June 2024, not evidence of a new museum delivery then.
+- **Tools:** Flutter/Dart, JavaScript, p5.js, WebViewX integration, Airtable-backed game data during development, later bundled JSON, cached network images.
 
-### Contributions and supporting material
+### Kent's contributions — games
 
-- **Kent's contributions:** Developed a cross-platform app and p5.js games; résumé reports an iOS/Android launch.
-- **To add:** Project titles and grouping; purpose/audience; team roles; design responsibilities; development/release dates; deliverables in each release; store links; screenshots/video.
+- Developed the four p5.js activities: packing naturalists' equipment into an irregular-shape snapping puzzle; finding four hidden insects in a pannable forest; sorting insects into classification boxes; and placing mammals east or west of the Wallace Line. The original history also records collaborator changes, particularly to Finding and shared integration.
+- Implemented reusable draggable/target-area classes, grid snapping and polygon interactions, touch handling, collision/placement checks, item navigation, shuffling, scoring, and completion-state handling.
+- Refined mobile layouts, play-area constraints and safe-area spacing; prevented unwanted page scrolling and added feedback such as active-item glow, correctness overlays, and informational popups that block game input while open.
+- Implemented Airtable retrieval for game items/areas during development. Added score/max-score updates and game-completion calls into the shared JavaScript-to-Flutter messaging system; this was collaboration on an existing bridge, not sole ownership of that integration.
+
+### Kent's contributions — Flutter UI and flow
+
+- Implemented and refined onboarding, chapter/activity tutorials, completion/congratulations, map, quiz, and answer-screen UI alongside Yuta's app development.
+- Built/refined reusable buttons, app bars, paginated tutorial/text layouts, progress indicators, chapter-specific styling, and limited inline emphasis formatting for onboarding text.
+- Refined home/map/help navigation, first-run routing, quiz exit/completion flow, and transitions between activities and chapter completion.
+- Addressed Flutter/WebView layering for app controls, image/background sizing, and network-image caching with loading/error presentation; performed release-period code cleanup and documentation.
+
+### Collaborators and attribution
+
+- **Yuta Nakayama (`didny`, also `nkymut` in history):** Initial Flutter app foundation; NFC scanning/unlocking; WebView/JavaScript bridge and game integration; user-session/Firebase work; Airtable-to-JSON/Firebase data changes; Finding touch/inertia and loading fixes; other UI/routing work; iOS build and opening-event release. Kent's UI/game changes should not be described as sole ownership of the app or these systems.
+- **Kiwi:** Standalone README credits game assets to Kiwi; original history also contains asset/content updates from `kheehwee`. Confirm the account-to-person mapping and full design/illustration credits before publication.
+
+### Evidence and supporting material
+
+- **Official launch evidence:** Museum recap [“We are 8!”](https://lkcnhm.nus.edu.sg/we-are-8/) (21 April 2023) confirms the 18 April launch, DIC/Musee collaboration, and NFC checkpoint experience; includes event and checkpoint photographs. The [app announcement](https://lkcnhm.nus.edu.sg/a-digital-naturalist-lkcnhm-app/) (11 April 2023) announces availability from 18 April, describes the four chapters, and links to the [App Store](https://apps.apple.com/sg/app/lkcnhm/id6446623521) and [Google Play](https://play.google.com/store/apps/details?id=sg.designincubation.musee_lkcnhm&hl=en). Reviewed 4 November 2026; current store availability was not checked. These sources substantiate the project/launch, while personal contributions are supported by repository evidence.
+- **Commit evidence — original app:** Early game implementation `9c8569d`, grid snapping `04c4d66`, dragging collision/data handling `e5fd6c7`, insect sorting `026b5ce`, reusable sorting components `52fa4bd`, Finding popup/input flow `52f4743` / `3960df5`, tutorial UI `56c4f72`, navigation `638db31`, game score integration `537488c` / `42300b0`, cached images `5259c3c`, onboarding emphasis `d217e9a`. Standalone extraction `5593a90` and README `57cb892` are in `lkcnhm-games`.
+- **To add:** Precise personal concept/UX/visual-design responsibilities and team credits; participant feedback/testing and usage evidence; screenshots/footage of app, NFC checkpoints, and physical museum context; publication permissions, including reuse of museum photographs.
